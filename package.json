@@ -1,0 +1,18 @@
+{
+  "name": "eslint-plugin-avoid-then",
+  "version": "1.0.0",
+  "description": "ESLint plugin to prefer await instead of then outside one-liners.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": ["eslint", "eslintplugin"],
+  "author": "Francisco Giordano <fg@frang.io>",
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": "^8.34.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.34.0"
+  }
+}
