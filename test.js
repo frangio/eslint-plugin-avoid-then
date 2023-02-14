@@ -9,11 +9,18 @@ t.run("avoid-then", rule, {
     {
       code: "const a = b.then(f);",
     },
+    {
+      code: "const a = b\n.map(x =>\n  f(x));",
+    },
   ],
 
   invalid: [
     {
       code: "const a = b\n  .then(f);",
+      errors: [{ message: "Prefer `await` instead of `then`." }],
+    },
+    {
+      code: "const a = b.then(\nf);",
       errors: [{ message: "Prefer `await` instead of `then`." }],
     },
   ],
